@@ -20,13 +20,13 @@ void board(){
     COORD food_pos = food.get_pos();
 
     vector <COORD> snake_body = snake.get_body();
-    cout << "\n\t\t\tSCORE: " << score << "\t\tPress 'n' to exit" << "\n\n";
+    cout << "\n\t\t\tSCORE: " << score << "  |  FOOD POS: " << food_pos.X << " " << food_pos.Y << "  |  Press 'n' to exit\n\n";
 
     for (int i=0; i<height; ++i){
         cout << "\t\t\t#";
         for (int j=0; j<width-2; ++j){
             if (i==0 || i==height-1) cout << "#";
-            else if (i==snake_pos.Y && j+1==snake_pos.X) cout << "0";
+            else if (i==snake_pos.Y && j+1==snake_pos.X) cout << "@";
             else if (i==food_pos.Y && j+1==food_pos.X) cout << "*";
             else {
                 bool isBodyPart = false;
