@@ -12,7 +12,6 @@ using namespace std;
 
 Snake snake({width/2, height/2}, 1);
 Food food;
-
 int score;
 
 void board(){
