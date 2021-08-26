@@ -41,3 +41,24 @@
 1627014203 source:f:\snakegame\src\snake.cpp
 	"Snake.h"
 
+1627315664 source:i:\snakegame\main.cpp
+	<iostream>
+	<conio.h>
+	<ctime>
+	<Snake.h>
+	<Food.h>
+
+1627315664 i:\snakegame\include\snake.h
+	<windows.h>
+	<vector>
+
+1627315664 i:\snakegame\include\food.h
+	<windows.h>
+	<cstdlib>
+
+1627315664 source:i:\snakegame\src\food.cpp
+	"Food.h"
+
+1627315664 source:i:\snakegame\src\snake.cpp
+	"Snake.h"
+
