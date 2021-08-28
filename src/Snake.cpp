@@ -9,32 +9,57 @@ Snake::Snake(COORD pos, int vel)
     body.push_back(pos);
 }
 
-void Snake::direction(char dir) {this->dir= dir;}
-void Snake::grow(){len++;}
-COORD Snake::get_pos(){ return pos;}
+void Snake::direction(char dir)
+{
+    this->dir= dir;
+}
+void Snake::grow()
+{
+    len++;
+}
+COORD Snake::get_pos()
+{
+    return pos;
+}
 
-vector <COORD> Snake::get_body(){return body;}
+vector <COORD> Snake::get_body()
+{
+    return body;
+}
 
-void Snake::move_snake(){
-    switch(dir){
-        case 'u': pos.Y-= vel; break; // decrease y coordinate to move down
-        case 'd': pos.Y+= vel; break; // increase y coordinate to move up
-        case 'l': pos.X-= vel; break; // decrease x coordinate to move left
-        case 'r': pos.X+= vel; break; // increase x coordinate to move right
+void Snake::move_snake()
+{
+    switch(dir)
+    {
+    case 'u':
+        pos.Y-= vel;
+        break; // decrease y coordinate to move down
+    case 'd':
+        pos.Y+= vel;
+        break; // increase y coordinate to move up
+    case 'l':
+        pos.X-= vel;
+        break; // decrease x coordinate to move left
+    case 'r':
+        pos.X+= vel;
+        break; // increase x coordinate to move right
     }
 
     body.push_back(pos);
     if (body.size()>len) body.erase(body.begin());
 }
 
-bool Snake::eaten(COORD food_pos) {
+bool Snake::eaten(COORD food_pos)
+{
     if(food_pos.X==pos.X && food_pos.Y== pos.Y) return true;
     return false;
 }
 
-bool Snake::collided(){
+bool Snake::collided()
+{
     if (pos.X<1 || pos.X>width-2 || pos.Y<1 || pos.Y>height-2) return true;
-    for (int i=0; i<len-1; ++i){
+    for (int i=0; i<len-1; ++i)
+    {
         if (pos.X==body[i].X && pos.Y==body[i].Y) return true;
     }
     return false;

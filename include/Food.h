@@ -9,12 +9,12 @@
 
 class Food
 {
-    private:
-        COORD pos;
+private:
+    COORD pos;
 
-    public:
-        void gen_food();
-        COORD get_pos();
+public:
+    void gen_food();
+    COORD get_pos();
 };
 
 #endif // FOOD_H
